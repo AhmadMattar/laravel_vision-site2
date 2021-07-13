@@ -50,7 +50,38 @@ class PagesController extends Controller
     }
 
     public function portfolio(){
-        return view('portfolio');
+        $data = [
+            ['id' => 1,
+            'name' => 'project1',
+            'image' => '1.jpg',
+            'category' => 'Design'],
+
+            ['id' => 2,
+            'name' => 'project2',
+            'image' => '2.jpg',
+            'category' => 'Design'],
+
+            ['id' => 3,
+            'name' => 'project3',
+            'image' => '3.jpg',
+            'category' => 'camera'],
+
+            ['id' => 4,
+            'name' => 'project4',
+            'image' => '4.jpg',
+            'category' => 'food'],
+
+            ['id' => 5,
+            'name' => 'project5',
+            'image' => '5.jpg',
+            'category' => 'Design'],
+
+            ['id' => 6,
+            'name' => 'project6',
+            'image' => '6.jpg',
+            'category' => 'old']
+        ];
+        return view('portfolio')->with('data',$data);
     }
 
     public function contact(){
